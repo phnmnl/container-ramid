@@ -1,14 +1,13 @@
-![Logo](text4217.png)
-
-# MIDcor
+# wframid
 Version: 1.0
-## Short Description
 
-“R”-program that corrects 13C mass isotopomers spectra of metabolites for natural occurring isotopes and peaks overlapping
+## Short description
+Docker container of RaMID, R-program for extracting mass isotopomer spectra from raw data in CDF files
 
 ## Description
 
-“midcor.R” is an “R”-program that performs a primary analysis of isotopic isomers (isotopomers) distribution obtained by Gas Cromatography coupled with Mass Spectrometry (GCMS). The aim of this analysis is to have a correct distribution of isotopes originated from substrates that are artificially enriched with specific isotopes (usually 13C). To this end the program performs a correction for natural occurring isotopes and also correction for “impurities” of the assay media that give peaks overlapping with the spectra of analyzed labeled metabolites. This program offers two ways of corrections of “impurities” resulted from overlapping the assayed mass isotopomer distribution with peaks produced either by unknown metabolites in the media, or by different fragments produced by the assayed metabolite. 
+RaMID is a computer program designed to read the machine-generated files saved in netCDF format containing registered time course of m/z chromatograms. It evaluates the peaks of mass isotopomer distribution (MID) making them ready for further correction for natural isotope occurrence.
+RaMID is written in “R”, uses library “ncdf4” (it should be installed before the first use of RaMID)  and contains several functions, located in the files “ramid.R” and "libcdf.R", designed to read cdf-files, and analyze and visualize  the spectra that they contain.
 
 ## Key features
 
@@ -16,13 +15,12 @@ Version: 1.0
 
 ## Functionality
 
-- Preprocessing
-- Statistical Analysis
-- Workflows
+- Preprocessing of raw data
+- initiation of workflows
 
 ## Approaches
 
-- Isotopic Labelling Analysis / 13C
+- Isotopic Labeling Analysis / 13C
     
 ## Instrument Data Types
 
@@ -30,13 +28,18 @@ Version: 1.0
 
 ## Data Analysis
 
+RaMID reads the CDF files presented in the working directory, and then
+- separates the time courses for selected m/z peaks corresponding to specific mass isotopomers;
+- corrects baseline for each selected mz;
+- choses the time points where the distribution of peaks is less contaminated by other compounds and thus is the most representative of the real analyzed distribution of mass isotopomers;
+- evaluates this distribution, and saves it in files readable by MIDcor, a program, which performs the next step of analysis, i.e. correction of the RaMID spectra for natural isotope occurrence, which is necessary to perform a fluxomic analysis.
 - correction for H+ loss produced by electron impact, natural occurring isotopes, and peaks overlapping
 
 ## Screenshots
 
 - screenshot of input data (format Metabolights), output is the same format with one more column added: corrected mass spectrum
 
-![screenshot](Screenshot.png)
+![screenshot]()
 
 ## Tool Authors
 
@@ -52,39 +55,18 @@ Version: 1.0
 
 ## Git Repository
 
-- https://github.com/seliv55/midcor
+- https://github.com/seliv55/RaMID
 
 ## Installation
 
-- 1) As independent program. MIDcor itself does not require installation. Standing in the MIDcor directory enter in R environment with the command:
-  
-'''  R '''
-  
- read the necessary functions:
-  
-''' source("lib.R")
-  
-source("midcor.R")'''
-  
-  
-- 2) Docker image. To create the Docker container: 
-        - go to the directory where the dockerfile is;
-        - create container from dockerfile:
-''' sudo docker build -t midcor:0.1 . '''
+- 1) Docker image. To create the Docker container: i) go to the directory where the dockerfile is;
+              ii) create container from dockerfile:
+''' sudo docker build -t ramidcor:0.1 .  '''
 
 ## Usage Instructions
 
-  To run MIDcor independently: standing in the MIDcor directory inside R environment, after reading the sources execute the command:
+ # To run MIDcor as a docker image, execute
  
- ''' run_midcor("input_file","output_file")  '''
- 
- here input file should be in Metabolights format, as is shown in the screenshot
- 
- To run MIDcor as a docker image, execute
- 
- '''  sudo docker run -i -t -v $PWD:/data midcor:0.1 -i /data/input.csv -o /data/output.csv '''
+ '''  sudo docker run -i -t -v $PWD:/data ramidcor:0.1 -i /data/input.csv -o /data/output.csv ''' #Anusha-hypoxia.csv
 
- An example of input file is provided as "outin.csv"
 
-## Publications
-- “MIDcor”, an R-program for deciphering mass interferences in mass spectra of metabolites enriched in stable isotopes. Submitted to BMC bioinformatics.

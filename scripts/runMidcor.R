@@ -18,5 +18,7 @@ if(!("input" %in% names(opt)) || !("output" %in% names(opt)) ) {
 
 library(midcor)
 
-run_midcor(opt$input, opt$output)
+library(ncdf4) # library reading cdf
+
+ruramid(opt$input, opt$output)
 
