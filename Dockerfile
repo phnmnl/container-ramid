@@ -19,7 +19,7 @@ RUN echo 'options("repos"="http://cran.rstudio.com")' >> /etc/R/Rprofile.site
 RUN echo 'install.packages("devtools")' > install_midcor.R
 RUN echo 'install.packages("optparse")' >> install_midcor.R
 RUN echo 'library(devtools)' >> install_midcor.R
-RUN echo 'install_github("seliv55/tmp")' >> install_midcor.R
+RUN echo 'install_github("seliv55/RaMID")' >> install_midcor.R
 
 RUN Rscript install_midcor.R
 

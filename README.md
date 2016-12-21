@@ -67,6 +67,8 @@ RaMID reads the CDF files presented in the working directory, and then
 
  # To run MIDcor as a docker image, execute
  
- '''  sudo docker run -i -t -v $PWD:/data ramidcor:0.1 -i /data/input.csv -o /data/output.csv ''' #Anusha-hypoxia.csv
+ '''  sudo docker run -i -t -v $PWD:/data ramidcor:0.1 -i /data/input.csv -o /data/output.csv '''
+ 
+  #In the presented example we provided an input file "Anusha-hypoxia.csv"
 
 
