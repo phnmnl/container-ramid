@@ -1,8 +1,10 @@
-# wframid
+![Logo](figs/logo.png)
+
+# RaMID
 Version: 1.0
 
 ## Short description
-Docker container of RaMID, R-program for extracting mass isotopomer spectra from raw data in CDF files
+R-program to read CDF files, created by mass spectrometry machine, and evaluate the mass spectra of 13C-labeled metabolites 
 
 ## Description
 
@@ -55,19 +57,19 @@ RaMID reads the CDF files presented in the working directory, and then
 
 ## Git Repository
 
-- https://github.com/seliv55/RaMID
+- https://github.com/seliv55/RaMID-docker
 
 ## Installation
 
 - 1) Docker image. To create the Docker container: i) go to the directory where the dockerfile is;
               ii) create container from dockerfile:
-''' sudo docker build -t ramidcor:0.1 .  '''
+''' sudo docker build -t ramid:0.1 .  '''
 
 ## Usage Instructions
 
  # To run MIDcor as a docker image, execute
  
- '''  sudo docker run -i -t -v $PWD:/data ramidcor:0.1 -i /data/input.csv -o /data/output.csv '''
+ '''  sudo docker run -i -t -v $PWD:/data ramid:0.1 -i /data/input.csv -o /data/output.csv '''
  
   #In the presented example we provided an input file "Anusha-hypoxia.csv"
 
