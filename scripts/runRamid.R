@@ -16,7 +16,7 @@ if(!("input" %in% names(opt)) || !("output" %in% names(opt)) ) {
   q(status = 1,save = "no")
 }
 
-library(midcor)
+library(ramid)
 
 library(ncdf4) # library reading cdf
 
