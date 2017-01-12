@@ -8,8 +8,7 @@ R-program to read CDF files, created by mass spectrometry machine, and evaluate 
 
 ## Description
 
-RaMID is a computer program designed to read the machine-generated files saved in netCDF format containing registered time course of m/z chromatograms. It evaluates the peaks of mass isotopomer distribution (MID) making them ready for further correction for natural isotope occurrence.
-RaMID is written in “R”, uses library “ncdf4” (it should be installed before the first use of RaMID)  and contains several functions, located in the files “ramid.R” and "libcdf.R", designed to read cdf-files, and analyze and visualize  the spectra that they contain.
+Here a docker image of RaMID can be created. RaMID is a computer program designed to read the machine-generated files saved in netCDF format containing registered time course of m/z chromatograms. It evaluates the peaks of mass isotopomer distribution (MID) making them ready for further correction for natural isotope occurrence. To create the docker image the github repository "https://github.com/seliv55/RaMID" is used.
 
 ## Key features
 
@@ -59,10 +58,10 @@ RaMID reads the CDF files presented in the working directory, and then
 
 - https://github.com/seliv55/RaMID-docker
 
-## Installation
+## Installation as Docker image
 
-- 1) Docker image. To create the Docker container: i) go to the directory where the dockerfile is;
-              ii) create container from dockerfile:
+- go to the directory where the dockerfile is.
+- create container from dockerfile:
 ''' sudo docker build -t ramid:0.1 .  '''
 
 ## Usage Instructions
