@@ -70,6 +70,6 @@ RaMID reads the CDF files presented in the working directory, and then
  
  '''  sudo docker run -i -t -v $PWD:/data ramid:0.1 -i /data/ramidin.csv -o /data/ramidout.csv '''
  
-- In the presented example we provided an input file "Anusha-hypoxia.csv"
+
 
 
