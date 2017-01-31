@@ -20,5 +20,5 @@ library(ramid)
 
 library(ncdf4) # library reading cdf
 
-ruramid(opt$input, opt$output)
+ruramid(opt$input, opt$output, opt$input)
 
