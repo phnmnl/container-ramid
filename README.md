@@ -68,7 +68,7 @@ RaMID reads the CDF files presented in the working directory, and then
 
 - To run RaMID as a docker image, execute
  
- '''  sudo docker run -i -t -v $PWD:/data ramid:0.1 -i /data/ramidin.csv -o /data/ramidout.csv '''
+ '''  sudo docker run -i -t -v $PWD:/data ramid:0.1 -i /data/ramidin.csv -o /data/ramidout.csv -z /data/wd.zip '''
  
 
 
