@@ -6,7 +6,7 @@ MAINTAINER PhenoMeNal-H2020 Project ( phenomenal-h2020-users@googlegroups.com )
 
 LABEL version=0.1
 LABEL tool_version=1.0
-ENV RAMID_REVISION "d7bbde84f9349e40f583816657d634fc45599677"
+ENV RAMID_REVISION "954bfb3430bb92c96e69e3cbf66b82375848fa02"
 
 # Setup package repos
 RUN echo "deb http://cloud.r-project.org/bin/linux/ubuntu xenial/" >> /etc/apt/sources.list
