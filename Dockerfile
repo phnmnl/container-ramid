@@ -5,7 +5,9 @@ FROM ubuntu:16.04
 MAINTAINER PhenoMeNal-H2020 Project ( phenomenal-h2020-users@googlegroups.com )
 
 LABEL version=0.1
-LABEL tool_version=1.0
+LABEL software.version=1.0
+LABEL software=ramid
+
 ENV RAMID_REVISION "954bfb3430bb92c96e69e3cbf66b82375848fa02"
 
 # Setup package repos
