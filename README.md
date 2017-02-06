@@ -29,7 +29,7 @@ Here a docker image of RaMID can be created. RaMID is a computer program designe
 
 ## Data Analysis
 
-RaMID reads the CDF files presented in the working directory, and then
+- RaMID reads the CDF files presented in the working directory, and then
 - separates the time courses for selected m/z peaks corresponding to specific mass isotopomers;
 - corrects baseline for each selected mz;
 - choses the time points where the distribution of peaks is less contaminated by other compounds and thus is the most representative of the real analyzed distribution of mass isotopomers;
@@ -72,4 +72,4 @@ RaMID reads the CDF files presented in the working directory, and then
  
 ## Publications
 
-
+- 
