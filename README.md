@@ -58,7 +58,7 @@ RaMID reads the CDF files presented in the working directory, and then
 
 - https://github.com/seliv55/RaMID-docker
 
-## Installation as Docker image
+## Installation
 
 - go to the directory where the dockerfile is.
 - create container from dockerfile:
@@ -70,6 +70,6 @@ RaMID reads the CDF files presented in the working directory, and then
  
  '''  sudo docker run -i -t -v $PWD:/data ramid:0.1 -i /data/ramidin.csv -o /data/ramidout.csv -z /data/wd.zip '''
  
-
+## Publications
 
 
