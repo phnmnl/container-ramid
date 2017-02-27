@@ -25,7 +25,10 @@ RUN apt-get -y update && apt-get -y --no-install-recommends install r-base r-bas
 
 # Add scripts folder to container
 ADD scripts/runRamid.R /usr/bin/runRamid.R
-
 RUN chmod +x /usr/bin/runRamid.R
+
+# Add test scripts
+ADD runTest1.sh /usr/local/bin/runTest1.sh
+RUN chmod a+x /usr/local/bin/runTest1.sh
 # Define Entry point script
 ENTRYPOINT ["runRamid.R"]
