@@ -8,7 +8,7 @@ LABEL version=0.1
 LABEL software.version=1.0
 LABEL software=ramid
 
-ENV RAMID_REVISION "954bfb3430bb92c96e69e3cbf66b82375848fa02"
+ENV RAMID_REVISION "4c372385c9a4b043c8be028cf75380ff6c3875e3"
 
 # Setup package repos
 RUN echo "deb http://cloud.r-project.org/bin/linux/ubuntu xenial/" >> /etc/apt/sources.list

@@ -21,5 +21,5 @@ library(ramid)
 
 library(ncdf4) # library reading cdf
 
-ruramid(opt$input, opt$output, opt$zipfile)
+ruramid(inFile=opt$input, ouFile=opt$output, cdfzip=opt$zipfile)
 

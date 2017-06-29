@@ -64,7 +64,7 @@ Here a docker image of RaMID can be created. RaMID is a computer program designe
 - Create container from dockerfile:
 
 ```
-docker build -t ramid:0.1 .
+docker build -t ramid:0.2 .
 ```
 
 Alternatively, pull from repo:
@@ -75,11 +75,24 @@ docker pull container-registry.phenomenal-h2020.eu/phnmnl/ramid
 
 ## Usage Instructions
 
-- To run RaMID as a docker image, execute
+- To run RaMID as a docker image created in the PhenoMeNal repository, execute
  
 ```
 docker run -it -v $PWD:/data container-registry.phenomenal-h2020.eu/phnmnl/ramid -i /data/ramidin.csv -o /data/ramidout.csv -z /data/wd.zip
 ```
+To run RaMID as a docker image created locally:
+
+- using an example of monopeak CDF files, execute
+
+```
+docker run -it -v $PWD:/data ramid:0.2 -i /data/ramidin.csv -o /data/ramidout.csv -z /data/data/wd.zip
+```
+- using an example of multipeaks CDF files, execute
+ 
+```
+docker run -it -v $PWD:/data ramid:0.2 -i /data/cdf2midout.csv -o /data/ramidout.csv -z /data/data/roldan.zip
+```
+
  
 ## Publications
 
