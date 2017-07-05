@@ -92,10 +92,15 @@ docker run -it -v $PWD:/data ramid:0.2 -i /data/ramidin.csv -o /data/ramidout.cs
 ```
 docker run -it -v $PWD:/data ramid:0.2 -i /data/cdf2midout.csv -o /data/ramidout.csv -z /data/data/roldan.zip
 ```
-- run test using the data that are in the file "ramidout.csv" in https://drive.google.com/drive/folders/0B1lAg6jyw6lvSlphUi1mdlUwUXM
+- run test1 using the data that are in the file "ramidout.csv" in https://drive.google.com/drive/folders/0B1lAg6jyw6lvSlphUi1mdlUwUXM
  
 ```
 docker run -it --entrypoint=runTest1.sh ramid:0.2 
+```
+- run test2 using the multipeak CDF files that are in the file "cdf2midout.csv" in https://drive.google.com/drive/folders/0B1lAg6jyw6lvSlphUi1mdlUwUXM
+ 
+```
+docker run -it --entrypoint=runTest2.sh ramid:0.2 
 ```
  
 ## Publications
