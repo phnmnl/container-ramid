@@ -4,9 +4,14 @@ FROM container-registry.phenomenal-h2020.eu/phnmnl/rbase:v3.4.1-1xenial0_cv0.2.1
 
 MAINTAINER PhenoMeNal-H2020 Project ( phenomenal-h2020-users@googlegroups.com )
 
-LABEL version=1.0
-LABEL software.version=1.0
-LABEL software=ramid
+LABEL version="1.0"
+LABEL software.version="1.0"
+LABEL software="ramid"
+LABEL description="Evaluates the peaks of mass isotopomer distribution (MID), making them ready for correction for natural isotope occurrence."
+LABEL website="https://github.com/seliv55/ramid"
+LABEL documentation="https://github.com/phnmnl/container-ramid/blob/master/README.md"
+LABEL license="https://github.com/phnmnl/container-ramid/blob/develop/License.txt"
+LABEL tags="Metabolomics"
 
 ENV RAMID_REVISION "4c372385c9a4b043c8be028cf75380ff6c3875e3"
 
