@@ -13,7 +13,7 @@ LABEL documentation="https://github.com/phnmnl/container-ramid/blob/master/READM
 LABEL license="https://github.com/phnmnl/container-ramid/blob/develop/License.txt"
 LABEL tags="Metabolomics"
 
-ENV RAMID_REVISION "4c372385c9a4b043c8be028cf75380ff6c3875e3"
+ENV RAMID_REVISION "c2c7a8beefe0d1fa6810d21ad84e3b636a88a87e"
 
 # Setup package repos
 RUN apt-get -y update && apt-get -y --no-install-recommends install r-base-dev libssl-dev \
