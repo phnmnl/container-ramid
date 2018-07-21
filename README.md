@@ -63,7 +63,7 @@ For advanced Docker usage:
 - Create container from dockerfile:
 
 ```
-docker build -t ramid:0.2 .
+docker build -t ramid .
 ```
 
 Alternatively, pull from repo:
@@ -81,22 +81,10 @@ On a PhenoMeNal Cloud Research Environment, go to Fluxomics tool category, and t
 ```
 docker run -it -v $PWD:/data container-registry.phenomenal-h2020.eu/phnmnl/ramid -i /data/ramidin.csv -o /data/ramidout.csv -z /data/wd.zip
 ```
-To run RaMID as a docker image created locally:
-
-- using an example of monopeak CDF files, execute
+To run RaMID as a docker image created locally, go to a folder, containing the input data, and run the image. For instance, for the described above first example, execute
 
 ```
-docker run -it -v $PWD:/data ramid:0.2 -i /data/ramidin.csv -o /data/ramidout.csv -z /data/data/wd.zip
-```
-- using an example of multipeaks CDF files, execute
- 
-```
-docker run -it -v $PWD:/data ramid:0.2 -i /data/cdf2midout.csv -o /data/ramidout.csv -z /data/data/roldan.zip
-```
-- run test1 using the data that are in the file "ramidout.csv" in https://drive.google.com/drive/folders/0B1lAg6jyw6lvSlphUi1mdlUwUXM
- 
-```
-docker run -it --entrypoint=runTest1.sh ramid:0.2 
+docker run -it -v $PWD:/data ramid -i /data/exam1in.csv -o /data/exam1ou.csv -z /data/data/exam1.zip
 ```
 - run test2 using the multipeak CDF files that are in the file "cdf2midout.csv" in https://drive.google.com/drive/folders/0B1lAg6jyw6lvSlphUi1mdlUwUXM
  
